@@ -12,6 +12,4 @@ export default class Client {
         this.socketOpts = options.socketOpts;
         this.socket = io(this.connectTo);
     }
-
-
 }
