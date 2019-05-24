@@ -22,7 +22,7 @@ network.socket = new WebSocketAsPromised(network.url, {
     timeout: config.connection.timeout
 });
 network.socketId = null;
-network.onUnpackedMessage.addListener(response => onResponse(response));
+network.socket.onUnpackedMessage.addListener(response => onResponse(response));
 
 const requests = {
     MAP: {request: 'map', id: network.socketId},
