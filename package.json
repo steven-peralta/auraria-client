@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "client code for auraria game",
   "main": "dist/bundle.js",
+  "module": "src/main.js",
   "scripts": {
     "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
