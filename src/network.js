@@ -13,7 +13,7 @@ const errorCodes = [
 ];
 
 let network = {};
-network.protocol = config.connction.secure? 'wss' : 'ws';
+network.protocol = config.connection.secure? 'wss' : 'ws';
 network.url = `${network.protocol}://${config.connection.ip}:${config.connection.port}`;
 network.isConnected = false;
 network.socket = new WebSocketAsPromised(network.url, {
