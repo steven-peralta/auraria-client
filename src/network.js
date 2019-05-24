@@ -1,14 +1,17 @@
 import WebSocketAsPromised from 'websocket-as-promised';
 import {config} from './config';
 import Action from './Action';
+
 let network = {};
 network.protocol = config.connction.secure? 'wss' : 'ws';
 network.url = `${network.protocol}://${config.connection.ip}:${config.connection.port}`;
+network.isConnected = false;
 network.socket = new WebSocketAsPromised(network.url, {
     packMessage: data => JSON.stringify(data),
-    unpackMessage: data => JSON.parse(message)
+    unpackMessage: message => JSON.parse(message),
+    attachRequestId: (data, requestId) => Object.assign({id: requestId}, data),
+    extractRequestId: data => data && data.id
 });
-network.isConnected = false;
 
 async function connect() {
     try {
@@ -26,3 +29,7 @@ async function dispatch(action) {
 }
 
 export default network;
+export {
+    connect,
+    dispatch
+};
