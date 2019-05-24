@@ -1,0 +1,13 @@
+connection:
+  ip: 172.0.0.1
+  port: 8080
+  secure: false
+
+assets:
+  url: 127.0.0.1
+  port: 80
+  https: false
+
+screen:
+  width: 800
+  height: 600
