@@ -3,10 +3,9 @@ const path = require('path');
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js',
+        filename: 'auraria-client.js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'auraria-client',
-        libraryTarget: 'umd'
+        library: 'auraria-client'
     },
     module: {
         rules: [
