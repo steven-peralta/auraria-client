@@ -1,3 +1,3 @@
-import {config} from './config';
+import Game from './Game';
 
-console.log(config);
+export default Game;

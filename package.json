@@ -4,20 +4,32 @@
   "description": "client code for auraria game",
   "main": "src/index.js",
   "scripts": {
+    "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node ./dist/main.js",
     "build": "webpack --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "js-yaml-loader": "^1.2.0",
     "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2",
-    "js-yaml-loader": "^1.2.0"
+    "webpack-cli": "^3.3.2"
   },
   "dependencies": {
     "eventemitter3": "^3.1.2",
+    "pako": "^1.0.10",
     "pixi.js": "^5.0.3",
+    "react": "^16.8.6",
     "websocket-as-promised": "^0.9.0"
   }
 }

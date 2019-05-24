@@ -1,7 +1,9 @@
+import network from './network.js';
+
 export default class Action {
-    constructor(name, socketID, data = {}) {
+    constructor(name, data = {}) {
         this.name = name;
-        this.socketID = socketID;
+        this.socketId = network.socketId;
         this.data = data;
     }
 

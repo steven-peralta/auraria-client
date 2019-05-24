@@ -82,3 +82,5 @@ typings/
 # IDEs
 .idea/
 .c9/
+
+dist/

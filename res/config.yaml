@@ -2,6 +2,7 @@ connection:
   ip: 172.0.0.1
   port: 8080
   secure: false
+  timeout: 10000 # number in milliseconds between each ping/pong before a timeout is called
 
 assets:
   url: 127.0.0.1
