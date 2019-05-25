@@ -5,7 +5,8 @@ module.exports = {
     output: {
         filename: 'auraria-client.js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'auraria'
+        library: 'auraria',
+        libraryTarget: 'umd'
     },
     module: {
         rules: [
