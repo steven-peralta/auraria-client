@@ -9,12 +9,13 @@ import network from './network';
 import config from './config';
 import Game from './Game';
 
-
-export default Action;
-export default actions;
-export default connect;
-export default dispatch;
-export default request;
-export default network;
-export default config;
-export default Game;
+export default {
+    Action,
+    actions,
+    connect,
+    dispatch,
+    request,
+    network,
+    config,
+    Game
+}
