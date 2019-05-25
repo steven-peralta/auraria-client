@@ -7,7 +7,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         library: 'auraria',
         libraryTarget: 'umd',
-        libraryExport: 'default'
     },
     module: {
         rules: [
