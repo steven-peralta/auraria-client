@@ -9,7 +9,7 @@ import network from './network';
 import config from './config';
 import Game from './Game';
 
-export default {
+export {
     Action,
     actions,
     connect,
